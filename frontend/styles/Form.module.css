@@ -1,0 +1,44 @@
+
+.input_group{
+    @apply flex border rounded-xl;
+    position: relative;
+}
+
+.input_text{
+    @apply w-full py-4 px-6 border rounded-xl bg-slate-50;
+    @apply focus:outline-none border-none
+}
+
+.button{
+    @apply w-full bg-slate-50  ;
+    @apply py-3 text-stone-950 text-lg border;
+    border-color:#b91c1c ;
+}
+
+.button:hover{
+    @apply bg-red-700 ;
+    @apply text-indigo-50;
+    
+}
+
+.button_custom{
+    @apply w-full border py-3 flex justify-center gap-2;
+   }
+   
+.button_custom:hover{
+    @apply bg-red-700 ;
+    @apply text-indigo-50;
+    
+}
+.input_text + *{
+    color: #CBD5E1;
+}
+
+.input_text:focus + *{
+    color: hsl(0, 76%, 50%);;
+}
+
+.input_text ~ span:hover *{
+    color: hsl(0, 76%, 50%);
+    cursor: pointer;
+}
