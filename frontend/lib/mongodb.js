@@ -5,7 +5,7 @@ const connection={};
 async function connect() {
     if(connection.isConnected)
     return;
-    const db = await mongoose.connect('mongodb+srv://urvi:urvi@cluster0.wncyubn.mongodb.net/?retryWrites=true&w=majority')
+    const db = await mongoose.connect(process.env.MONGODB_URI);
 
     connection.isConnected = db.connections[0].readyState;
 }
