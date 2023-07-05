@@ -29,8 +29,7 @@ const Remedies = ({ latitude, longitude }) => {
         {
           headers: {
             'Content-Type': 'application/json',
-            Authorization:
-              'Bearer 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', // Replace with your OpenAI API key
+            Authorization: process.env.API_KEY, // Replace with your OpenAI API key
           },
         }
       );
